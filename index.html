@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Strategist | Enterprise Edition</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
+        body { 
+            background-color: #ffffff; 
+            color: #2c3e50; /* Dark Blue Text for Readability */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling (Light Mode) */
+        .navbar { 
+            background: #ffffff; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand { color: #2c3e50 !important; }
+        .nav-link { color: #57606f !important; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: #0984e3 !important; }
+
+        /* Sections */
+        section { padding: 80px 0; min-height: 100vh; display: flex; align-items: center; }
+        
+        /* Hero Section (Light Gradient) */
+        #home { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+        }
+        .hero-title { 
+            font-size: 4rem; 
+            font-weight: bold; 
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Clean White Cards */
+        .card-clean {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 15px;
+            color: #2c3e50;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Soft Shadow */
+            transition: 0.4s;
+        }
+        .card-clean:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            border-color: #0984e3; 
+        }
+
+        /* Inputs */
+        .form-select {
+            background-color: #f1f2f6;
+            border: 1px solid #ced6e0;
+            color: #2c3e50;
+        }
+
+        /* Buttons */
+        .btn-glow {
+            background: linear-gradient(45deg, #0984e3, #00cec9);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(9, 132, 227, 0.3);
+        }
+        .btn-glow:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(9, 132, 227, 0.5); color: white;}
+
+        /* Tech Badges */
+        .tech-badge { 
+            background: #dfe6e9; 
+            color: #2d3436;
+            padding: 10px 20px; 
+            border-radius: 20px; 
+            margin: 5px; 
+            display: inline-block; 
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold animate__animated animate__fadeInLeft" href="#">🚀 AI Strategist</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto animate__animated animate__fadeInRight">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Project</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="zoom-in" data-aos-duration="1500">
+                <h1 class="hero-title animate__animated animate__pulse animate__infinite">Future Intelligence</h1>
+                <p class="lead text-muted my-4">Predict Social Media Engagement with State-of-the-Art Deep Learning Models.</p>
+                <a href="#dashboard" class="btn btn-glow mt-3">Start Predicting ⬇</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dashboard" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold text-primary">Analytics Control Center</h2>
+            <p class="text-muted">Select a brand to generate real-time AI forecasts.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="200">
+                <div class="card card-clean p-4 h-100">
+                    <h4 class="mb-4">⚙ Configuration</h4>
+                    <form method="POST" id="predictForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Target Brand</label>
+                            <select name="brand" class="form-select">
+                                {% for brand in brands %}
+                                    <option value="{{ brand }}" {% if brand == selected %} selected {% endif %}>{{ brand }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Compare With (Optional)</label>
+                            <select name="comp_brand" class="form-select">
+                                <option value="None">-- None --</option>
+                                {% for brand in brands %}
+                                    <option value="{{ brand }}">{{ brand }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-glow w-100 mt-2">🔮 Run Analysis</button>
+                    </form>
+
+                    {% if prediction %}
+                    <div class="mt-4 pt-4 border-top">
+                        <div class="mb-3">
+                            <small class="text-muted fw-bold">SENTIMENT</small>
+                            <div class="progress mt-1" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: {{ pos_pct }}%"></div>
+                                <div class="progress-bar bg-danger" style="width: {{ neg_pct }}%"></div>
+                            </div>
+                            <div class="d-flex justify-content-between text-small mt-1">
+                                <span class="text-success fw-bold">{{ pos_pct }}% Pos</span>
+                                <span class="text-danger fw-bold">{{ neg_pct }}% Neg</span>
+                            </div>
+                        </div>
+                        <div>
+                            <small class="text-muted fw-bold">BEST DAY</small>
+                            <h4 class="text-warning fw-bold">{{ best_day }}</h4>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-8" id="resultArea" data-aos="fade-left" data-aos-delay="400">
+                {% if prediction %}
+                <div class="card card-clean p-4 text-center animate__animated animate__zoomIn">
+                    <h6 class="text-muted text-uppercase">AI Forecast for Next Day</h6>
+                    <h1 class="display-3 fw-bold my-3 text-dark">{{ prediction }}</h1>
+                    <h3 style="color: {{ trend_col }}" class="animate__animated animate__flash fw-bold">{{ trend_txt }}</h3>
+                    
+                    <div class="mt-4 p-2 bg-light rounded border">
+                        <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid rounded" alt="Chart">
+                    </div>
+                </div>
+                {% else %}
+                <div class="card card-clean p-5 text-center h-100 d-flex align-items-center justify-content-center">
+                    <div>
+                        <h1 style="font-size: 5rem;">📊</h1>
+                        <h3>Waiting for Input...</h3>
+                        <p class="text-muted">Select a brand from the left to view insights.</p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h2 class="fw-bold text-dark mb-4">About The Project</h2>
+                <p class="lead text-secondary">An end-to-end Deep Learning solution designed to empower marketing teams with data-driven foresight.</p>
+                <p class="text-secondary">By leveraging Long Short-Term Memory (LSTM) networks, this system analyzes historical engagement patterns across major global brands to predict future trends with high accuracy.</p>
+                
+                <div class="mt-4">
+                    <h5 class="text-dark">Tech Stack:</h5>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">TensorFlow / Keras</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Bootstrap 5</span>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
+                <div class="card card-clean p-4">
+                    <h4 class="text-primary mb-3">🚀 Project Features</h4>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2">✅ <strong>Multi-Brand Analysis:</strong> Dynamic switching between Nike, Apple, Google, etc.</li>
+                        <li class="mb-2">✅ <strong>Time-Series Forecasting:</strong> Predicting next-day engagement rates.</li>
+                        <li class="mb-2">✅ <strong>Competitive Benchmarking:</strong> Real-time comparison graphs.</li>
+                        <li class="mb-2">✅ <strong>Sentiment Analysis:</strong> Understanding audience emotions.</li>
+                        <li class="mb-2">✅ <strong>Strategic Insights:</strong> Determining the "Golden Time" to post.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 text-muted" style="background: #ffffff; border-top: 1px solid #e1e4e8;">
+    <small>&copy; 2025 AI Brand Strategist. All Rights Reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize Animation on Scroll
+    AOS.init();
+
+    // Scroll to Result if Prediction was made
+    {% if scroll_to_result %}
+    window.onload = function() {
+        document.getElementById('dashboard').scrollIntoView({ behavior: 'smooth' });
+    };
+    {% endif %}
+</script>
+
+</body>
+</html>
