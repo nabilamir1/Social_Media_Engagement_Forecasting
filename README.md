@@ -2,6 +2,10 @@
 
 ![Flask Web App](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting/blob/main/Screenshot%202025-11-30%20193732.png?raw=true)
 
+
+[![Jupyter Notebook](https://colab.research.google.com/drive/1HQKdEoVY8A1LUct8DkNClXHViZfHxdp9)](train_multi.py)
+
+
 **AI Brand Strategist** is an end-to-end Deep Learning solution designed to empower marketing teams. It leverages **Long Short-Term Memory (LSTM)** networks to analyze historical engagement patterns across global brands (Nike, Apple, Google, Adidas) and predict future trends with high accuracy.
 
 ---
@@ -10,7 +14,7 @@
 
 We utilized the **Social Media Engagement Dataset**, processing daily metrics to train our time-series models.
 
-👉 **[Download Dataset Here]((https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset))**
+👉 **[Download Dataset Here](https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset)**
 
 | Feature | Description |
 | :--- | :--- |
@@ -57,12 +61,12 @@ The model was trained individually for each brand to ensure tailored accuracy.
 
 ## 👥 Team Members (Class of 2025)
 
-| Name | Role |
-| :--- | :--- |
-| **Nabil Amir** 
-| **Salah Eldin Mostafa** 
-| **Fares Mohamed** 
-| **Abdelrahman Mohamed Shokry** 
+| Project Team |
+| :--- |
+| **Nabil Amir** |
+| **Salah Eldin Mostafa** |
+| **Fares Mohamed** |
+| **Abdelrahman Mohamed Shokry** |
 
 ---
 
@@ -70,4 +74,5 @@ The model was trained individually for each brand to ensure tailored accuracy.
 
 1. **Clone Repository**
    ```bash
-   git clone [https://github.com/YourUsername/AI-Brand-Strategist.git](https://github.com/YourUsername/AI-Brand-Strategist.git)
+   git clone [https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git)
+   cd Social_Media_Engagement_Forecasting
