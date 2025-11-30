@@ -1,6 +1,6 @@
 # 🚀 AI Brand Strategist — Social Media Engagement Forecasting
 
-![Flask Web App]("Screenshot 2025-11-30 193732.png")
+![Flask Web App](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting/blob/main/Screenshot%202025-11-30%20193732.png?raw=true)
 
 **AI Brand Strategist** is an end-to-end Deep Learning solution designed to empower marketing teams. It leverages **Long Short-Term Memory (LSTM)** networks to analyze historical engagement patterns across global brands (Nike, Apple, Google, Adidas) and predict future trends with high accuracy.
 
