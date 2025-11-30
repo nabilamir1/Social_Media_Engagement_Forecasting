@@ -10,7 +10,7 @@
 
 We utilized the **Social Media Engagement Dataset**, processing daily metrics to train our time-series models.
 
-👉 **[Download Dataset Here]([LINK_TO_DATASET](https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset))**
+👉 **[Download Dataset Here]((https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset))**
 
 | Feature | Description |
 | :--- | :--- |
