@@ -1,27 +1,13 @@
 # 🚀 AI Brand Strategist — Social Media Engagement Forecasting
 
-![Flask Web App](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting/blob/main/Screenshot%202025-11-30%20193732.png?raw=true)
+![Dashboard Preview](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting/blob/main/Screenshot%202025-11-30%20193732.png?raw=true)
 
+[![Colab](https://img.shields.io/badge/Notebook-Open_in_Colab-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1HQKdEoVY8A1LUct8DkNClXHViZfHxdp9)
+[![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset)
 
-[![Jupyter Notebook](https://colab.research.google.com/drive/1HQKdEoVY8A1LUct8DkNClXHViZfHxdp9)](train_multi.py)
 
 
 **AI Brand Strategist** is an end-to-end Deep Learning solution designed to empower marketing teams. It leverages **Long Short-Term Memory (LSTM)** networks to analyze historical engagement patterns across global brands (Nike, Apple, Google, Adidas) and predict future trends with high accuracy.
-
----
-
-## 📂 Dataset
-
-We utilized the **Social Media Engagement Dataset**, processing daily metrics to train our time-series models.
-
-👉 **[Download Dataset Here](https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset)**
-
-| Feature | Description |
-| :--- | :--- |
-| **Brands** | Nike, Google, Apple, Adidas |
-| **Input** | Historical Engagement Rates (14-Day Sliding Window) |
-| **Target** | Next Day's Engagement Rate |
-| **NLP Features** | Text Sentiment Labels (Positive/Negative) |
 
 ---
 
@@ -35,7 +21,20 @@ We utilized the **Social Media Engagement Dataset**, processing daily metrics to
 
 ---
 
-## 🧠 Model Architecture
+## 🗂 Dataset
+
+We utilized the **Social Media Engagement Dataset** from Kaggle, processing daily metrics to train our time-series models.
+
+| Feature | Description |
+| :--- | :--- |
+| **Brands** | Nike, Google, Apple, Adidas |
+| **Input** | Historical Engagement Rates (14-Day Sliding Window) |
+| **Target** | Next Day's Engagement Rate |
+| **NLP Features** | Text Sentiment Labels (Positive/Negative) |
+
+---
+
+## 🔍 Models & Architecture
 
 We implemented a robust **LSTM** architecture suitable for capturing long-term dependencies in volatile social media data.
 
@@ -59,20 +58,30 @@ The model was trained individually for each brand to ensure tailored accuracy.
 
 ---
 
+## 📒 Project Components
+
+This repository contains:
+
+- **`train_multi.py`**: Jupyter Notebook code for training the LSTM models.
+- **`app.py`**: Flask backend for the Web Dashboard.
+- **`dashboard_ultimate.py`**: Tkinter Desktop Application for local analysis.
+- **`templates/`**: HTML5/Bootstrap frontend files.
+
+---
+
 ## 👥 Team Members (Class of 2025)
 
-| Project Team |
-| :--- |
-| **Nabil Amir** |
-| **Salah Eldin Mostafa** |
-| **Fares Mohamed** |
-| **Abdelrahman Mohamed Shokry** |
+- Nabil Amir
+- Salah Eldin Mostafa
+- Fares Mohamed
+- Abdelrahman Mohamed Shokry
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Clone Repository**
-   ```bash
-   git clone [https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git)
-   cd Social_Media_Engagement_Forecasting
+### 1. Clone Repository
+
+```bash
+git clone [https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting.git)
+cd Social_Media_Engagement_Forecasting
