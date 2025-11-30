@@ -2,7 +2,8 @@
 
 ![Dashboard Preview](https://github.com/nabilamir1/Social_Media_Engagement_Forecasting/blob/main/Screenshot%202025-11-30%20193732.png?raw=true)
 
-[![Colab](https://img.shields.io/badge/Notebook-Open_in_Colab-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1HQKdEoVY8A1LUct8DkNClXHViZfHxdp9)
+[![Colab](https://img.shields.io/badge/Notebook-Open_in_Colab-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1HQKdEoVY8A1LUct8DkNClXHViZfHxdp9?usp=sharing)
+
 [![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/subashmaster0411/social-media-engagement-dataset)
 
 
